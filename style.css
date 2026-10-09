@@ -285,9 +285,7 @@ img.photo.wide { max-height: 520px; object-fit: contain; background: var(--surfa
 }
 
 /* Team uniforms */
-.uniforms { display: grid; gap: 1rem; grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 1000px) { .uniforms { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .uniforms { grid-template-columns: 1fr; } }
+.uniforms { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .uniform {
   margin: 0; overflow: hidden; border-radius: var(--radius);
   border: 3px solid var(--red); background: var(--white); display: flex; flex-direction: column;
@@ -304,4 +302,5 @@ img.photo.wide { max-height: 520px; object-fit: contain; background: var(--surfa
 }
 .uniform figcaption span { font-size: .92rem; line-height: 1.45; color: var(--muted); }
 
-.uniform.flag-card img { object-fit: contain; background: #0e1a33; }
+.uniform.flag-card { grid-column: 1 / -1; }
+.uniform.flag-card img { aspect-ratio: 2 / 1; object-fit: contain; background: #0e1a33; }
