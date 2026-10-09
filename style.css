@@ -304,3 +304,14 @@ img.photo.wide { max-height: 520px; object-fit: contain; background: var(--surfa
 
 .uniform.flag-card { grid-column: 1 / -1; }
 .uniform.flag-card img { aspect-ratio: 2 / 1; object-fit: contain; background: #0e1a33; }
+
+/* Team photo gallery: first photo spans two columns */
+.team-gallery { grid-template-columns: repeat(3, 1fr); }
+.team-gallery .wide { grid-column: span 2; }
+.team-gallery img { height: 260px; }
+@media (max-width: 760px) {
+  .team-gallery { grid-template-columns: 1fr; }
+  .team-gallery .wide { grid-column: auto; }
+}
+.project-intro { margin-bottom: 1.5rem; align-items: center; }
+.project-intro img.photo { height: 460px; object-fit: cover; object-position: center 85%; }
