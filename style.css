@@ -315,3 +315,12 @@ img.photo.wide { max-height: 520px; object-fit: contain; background: var(--surfa
 }
 .project-intro { margin-bottom: 1.5rem; align-items: center; }
 .project-intro img.photo { height: 460px; object-fit: cover; object-position: center 85%; }
+
+/* Language switch RU / EN */
+.links { margin-left: auto; }
+.lang {
+  color: var(--white); text-decoration: none; font-weight: 800; font-size: .85rem; letter-spacing: .06em;
+  border: 2px solid var(--white); border-radius: 6px; padding: .2rem .6rem;
+}
+.lang:hover { background: var(--white); color: var(--red); }
+@media (max-width: 820px) { .lang { margin-left: auto; } }
